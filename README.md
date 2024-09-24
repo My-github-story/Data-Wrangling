@@ -1,6 +1,5 @@
-Copy the files to your home directory on IBEX. Uncompress the
-zip file on IBEX.
-Ans- scp /Users/khant0a/Downloads/ncbi_dataset.zip khant0a@ilogin.ibex.kaust.edu.sa:/home/khant0a/
+## Copy the files to your home directory on IBEX. Uncompress the zip file on IBEX.
+Ans - ```scp /Users/khant0a/Downloads/ncbi_dataset.zip khant0a@ilogin.ibex.kaust.edu.sa:/home/khant0a/```
 
 What is the largest and what is the smallest genome in the ones
 you just downloaded.
