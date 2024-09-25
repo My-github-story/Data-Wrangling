@@ -17,7 +17,7 @@ command-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | he
 ## output 
 1042519
 
-commamnd-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | tail -n 1 | awk '{print $NF}'```
+command-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | tail -n 1 | awk '{print $NF}'```
 ## output 
 4033464
 
