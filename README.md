@@ -5,6 +5,7 @@ command-```scp /Users/khant0a/Downloads/ncbi_dataset.zip khant0a@ilogin.ibex.kau
 
 ## What is the largest and what is the smallest genome in the ones you just downloaded. Write a command that outputs only the line with the smallest (largest) genome. How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
 command-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -n -u | head -n 1 > largest_genome```
+
 command-```$ cat largest_genome```
 ## output 
 Vibrio cholerae O1 biovar El Tor str. N16961	4033464
