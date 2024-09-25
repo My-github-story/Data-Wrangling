@@ -1,29 +1,29 @@
-
+## Week 3: Data Wrangling
 
 ## Copy the files to your home directory on IBEX. Uncompress the zip file on IBEX.
-```scp /Users/khant0a/Downloads/ncbi_dataset.zip khant0a@ilogin.ibex.kaust.edu.sa:/home/khant0a/```
+command-```scp /Users/khant0a/Downloads/ncbi_dataset.zip khant0a@ilogin.ibex.kaust.edu.sa:/home/khant0a/```
 
 ## What is the largest and what is the smallest genome in the ones you just downloaded. Write a command that outputs only the line with the smallest (largest) genome. How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -n -u | head -n 1 > largest_genome```
-```$ cat largest_genome```
+command-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -n -u | head -n 1 > largest_genome```
+command-```$ cat largest_genome```
 ## output 
 Vibrio cholerae O1 biovar El Tor str. N16961	4033464
 
-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | head -n 1```
+command-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | head -n 1```
 ## output 
 Chlamydia trachomatis D/UW-3/CX	1042519
 
-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | head -n 1 | awk '{print $NF}'```
+command-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | head -n 1 | awk '{print $NF}'```
 ## output 
 1042519
 
-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | tail -n 1 | awk '{print $NF}'```
+commamnd-```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -t$'\t' -n -k2 | tail -n 1 | awk '{print $NF}'```
 ## output 
 4033464
 
 ## Find the number of genomes that contain at least two “c” in the species name. How many of the species names contain two or more “c” but do not contain the word “coccus”? Your command should be a single line and output a number.
 
-Ans-```$ cut -f 1 ncbi_dataset.tsv |tail -n+2 | uniq | grep -ic  "c.*c"```
+command-```$ cut -f 1 ncbi_dataset.tsv |tail -n+2 | uniq | grep -ic  "c.*c"```
 ## output 
 7
 
