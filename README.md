@@ -1,8 +1,10 @@
-## Copy the files to your home directory on IBEX. Uncompress the zip file on IBEX.
-Ans - ```scp /Users/khant0a/Downloads/ncbi_dataset.zip khant0a@ilogin.ibex.kaust.edu.sa:/home/khant0a/```
 
-## What is the largest and what is the smallest genome in the ones you just downloaded.
-Ans- ```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -n -u | head -n 1 > largest_genome```
+
+## Copy the files to your home directory on IBEX. Uncompress the zip file on IBEX.
+```scp /Users/khant0a/Downloads/ncbi_dataset.zip khant0a@ilogin.ibex.kaust.edu.sa:/home/khant0a/```
+
+## What is the largest and what is the smallest genome in the ones you just downloaded. Write a command that outputs only the line with the smallest (largest) genome. How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
+```$ cut -f 1,11 data_summary.tsv | tail -n+2 | sort -n -u | head -n 1 > largest_genome```
 ```$ cat largest_genome```
 ## output 
 Vibrio cholerae O1 biovar El Tor str. N16961	4033464
@@ -24,6 +26,7 @@ Chlamydia trachomatis D/UW-3/CX	1042519
 Ans-```$ cut -f 1 ncbi_dataset.tsv |tail -n+2 | uniq | grep -ic  "c.*c"```
 ## output 
 7
+
 ```$ cut -f 1 ncbi_dataset.tsv |tail -n+2 | uniq | grep -io  "c.*c" | grep -ivc "coccus"```
 ## output
 5
